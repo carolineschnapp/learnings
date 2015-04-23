@@ -83,5 +83,13 @@ If you want to blow up the last 3 commits:
 
 `git reset --hard HEAD^^^` # Nuke the last THREE commits.
 
+**Blooper**
+
+You did not use the proper naming convention for your very last commit. You only want to edit the commit message.
+
+**Solution**
+
+`git commit --amend -m "My new commit message"` # Changes the commit message for your last commit.
+
 
 
