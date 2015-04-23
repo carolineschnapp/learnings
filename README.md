@@ -37,9 +37,7 @@ From the branch you worked on, do the following:
 
 `git checkout master` # Go to your local master branch. Terminal will spit "Already on 'master'" if you're already there.
 
-`git diff origin/master..master` # Optional. Check if other folks have done things to the remote master branch since last time you fetched changes.
-
-`git pull` # Non-optional if the last command showed that stuff happened. Always a good idea before you create a new branch amiright.
+`git pull` # Always do that before you create a new branch amiright.
 
 `git checkout -b my-new-branch` # This will create a new branch with name my-new-branch and move to it.
 
