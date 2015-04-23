@@ -59,7 +59,7 @@ If you only want to undo edits to a specific file:
 
 You can drag and drop a path from Finder to Terminal, so if you're a lazy or awkward typist you know what you have to do.
 
-### STAGE TWO After you've committed something to your `my-branch` branch, but before you publish that branch to your remote `origin/my-branch`.
+### STAGE TWO After you've committed something to your local `my-branch` branch, but before you publish that branch to Github.
 
 **You want to change or nuke your last commit**
 
