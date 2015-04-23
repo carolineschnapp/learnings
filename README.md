@@ -43,6 +43,21 @@ From the branch you worked on, do the following:
 
 `git stash apply` # This will copy the content of the Git “clipboard” to where you are now.
 
+**Blooper**
+
+You started working on the correct branch, done lots of shit, got lost, and want to start over with a clean slate. Nothing's been commited yet.
+
+**Solution**
+
+From the branch you worked on, do the following:
+
+`git clean` # This deletes untracked files, except those ignored. This also reverts all edited files that are tracked so that they are identical to the ones in HEAD. HEAD is the last commit on the current branch. If you're on master, it's the last commit on master. This is equivalent to selecting all and 'Discard changes to selected files' in the Github app.
+
+If you only want to undo edits to a specific file:
+
+`git checkout -- filename` # This resets one specific file to its previous state, i.e. HEAD state.
+
+You can drag and drop a path from Finder to Terminal, so if you're a lazy or awkward typist you know what you have to do.
 
 
 
