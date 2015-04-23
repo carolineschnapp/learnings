@@ -61,9 +61,9 @@ You can drag and drop a path from Finder to Terminal, so if you're a lazy or awk
 
 ### STAGE TWO After you've committed something to your local `my-branch` branch, but before you publish that branch to Github.
 
-**You want to change or nuke your last commit**
+**Blooper**
 
-You just made a commit and you realize you made a mistake, either in what you changed, or how you named that commit.
+You just made a commit and you realize you made a mistake, either in what you changed, or how you named that commit. You want to change or nuke your last commit.
 
 **Solution**
 
