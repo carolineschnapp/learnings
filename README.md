@@ -1,10 +1,10 @@
 As a prerequisite to this tutorial, you will need to:
 
-* Create a new repo inside your personal Github account. Call it 'learnings'.
+* Create a new repo in your personal Github account. Call it 'learnings'.
 * In that repo, add a README.md file with random text in it — any text you like.
 * Clone the repo to your computer.
 
-That's it. We won't cover how the above is done, that's Github basics. Also, Github will hold your hand through that process anyway.
+That's it. We won't cover how the above is done, that's Github basics. Github will hold your hand through that process anyway.
 
 Do that, and when done come back here.
 
