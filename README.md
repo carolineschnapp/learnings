@@ -91,5 +91,22 @@ You did not use the proper naming convention for your very last commit. You only
 
 `git commit --amend -m "My new commit message"` # Changes the commit message for your last commit.
 
+**Blooper**
+
+While we are on the subject of changing a commit _message_, how do you go about renaming the branch you are working on because the name does not respect the conventions or contains a typo.
+
+**Solution**
+
+Start with this:
+
+`git branch -m oldname newname` # This renames your branch on your computer.
+
+Then if that branch had been published on Github, continue on with these additional commands:
+
+`git push origin :oldname` # Delete the branch on Github.
+`git push origin newname` # Publishes your local branch to Github.
+
+_Only rename a branch that you have been all alone contributing to, though._ 
+
 
 
