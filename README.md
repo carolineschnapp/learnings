@@ -51,7 +51,7 @@ You started working on the correct branch, done lots of shit, got lost, and want
 
 From the branch you worked on, do the following:
 
-`git clean` # This deletes untracked files, except those ignored. This also reverts all edited files that are tracked so that they are identical to the ones in HEAD. HEAD is the last commit on the current branch. If you're on master, it's the last commit on master. This is equivalent to selecting all and 'Discard changes to selected files' in the Github app.
+`git clean -f` # This deletes untracked files, except those ignored. This also reverts all edited files that are tracked so that they are identical to the ones in HEAD. HEAD is the last commit on the current branch. If you're on master, it's the last commit on master. This is equivalent to selecting all and 'Discard changes to selected files' in the Github app.
 
 If you only want to undo edits to a specific file:
 
