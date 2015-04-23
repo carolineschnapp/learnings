@@ -59,5 +59,29 @@ If you only want to undo edits to a specific file:
 
 You can drag and drop a path from Finder to Terminal, so if you're a lazy or awkward typist you know what you have to do.
 
+### STAGE TWO After you've committed something to your `my-branch` branch, but before you publish that branch to your remote `origin/my-branch`.
+
+**You want to change or nuke your last commit**
+
+You just made a commit and you realize you made a mistake, either in what you changed, or how you named that commit.
+
+**Solution**
+
+From the branch you commited to, do the following if you want to amend what you had commited:
+
+`git reset --soft HEAD^` # This will undo the last commit but what was commited is back on stage so that you can edit all that, and commit again. Worth noting, the last commit is deleted from the Github history, so your honor is saved. After this, you will need to fix your stuff and commit your changs again.
+
+What you had done was complete shit and does not need to be revisited. If you want to completely blow away the last commit and start fresh, use `--hard` instead of `--soft`:
+
+`git reset --hard HEAD^` # This will undo the last commit and then do a git clean. There'll be no untracked files, and nothing on stage at the end of this.
+
+The `^` means the last commit. If you want to blow away the last 2 commits, you'll use two of those:
+
+`git reset --hard HEAD^^` # Nuke the last TWO commits.
+
+If you want to blow up the last 3 commits:
+
+`git reset --hard HEAD^^^` # Nuke the last THREE commits.
+
 
 
