@@ -104,6 +104,7 @@ Start with this:
 Then if that branch had been published on Github, continue on with these additional commands:
 
 `git push origin :oldname` # Delete the branch on Github.
+
 `git push origin newname` # Publishes your local branch to Github.
 
 _Only rename a branch that you have been all alone contributing to, though._ 
