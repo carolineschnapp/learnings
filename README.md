@@ -35,7 +35,7 @@ From the branch you worked on, do the following:
 
 `git status` # Optional, this should output "On branch whatever, nothing to commit, working directory clean".
 
-`git checkout master` # Go to your local master branch.
+`git checkout master` # Go to your local master branch. Terminal will spit "Already on 'master'" if you're already there.
 
 `git diff origin/master..master` # Optional. Check if other folks have done things to the remote master branch since last time you fetched changes.
 
