@@ -51,7 +51,7 @@ You started working on the correct branch, done lots of shit, got lost, and want
 
 From the branch you worked on, do the following:
 
-`git clean -f -d` # This deletes untracked files, except those ignored. This also reverts all edited files that are tracked so that they are identical to the ones in HEAD. HEAD is the last commit on the current branch. If you're on the branch my-new-branch, it's the last commit to my-new-branch. This is equivalent to selecting all and 'Discard changes to selected files' in the Github app. `-f`is to force, and `-d` is to delete the folders you migh have added.
+`git reset --hard HEAD` # This deletes untracked files and folders, except those ignored. This also reverts all edited files that are tracked so that they are identical to the ones in HEAD. HEAD is the last commit on the current branch. If you're on the branch my-new-branch, it's the last commit to my-new-branch. This is equivalent to selecting all and 'Discard changes to selected files' in the Github app.
 
 If you only want to undo edits to a specific file:
 
