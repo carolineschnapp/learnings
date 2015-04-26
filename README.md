@@ -163,8 +163,6 @@ After you created your PR, someone tells you your branch name is less than ideal
 
 **Solution**
 
-It's very easy to NOT use command line to rename a branch published to Github, so we'll start with using the Github website UI. This will work only if your PR/branch has not been merged.
-
 Start with this:
 
 `git branch -m oldname newname` # This renames your branch on your computer.
@@ -175,7 +173,7 @@ Then time to delete the old branch on Github, and push your renamed branch to it
 
 `git push origin newname` # Publishes your local branch to Github.
 
-Finally you'll need to create a PR again, because as far as Github is concerned that's a brand new branch.
+Finally you'll need to create a PR **again**, because as far as Github is concerned that's a brand new branch. Don't forget to close the old PR.
 
 
 
