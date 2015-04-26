@@ -1,7 +1,7 @@
 As a prerequisite to this tutorial, you will need to:
 
 * Create a new repo in your personal Github account. Call it 'learnings'.
-* In that repo, add a README.md file with content in it.
+* In that repo, add a README.md file with text content in it.
 * Clone the repo to your computer.
 
 Do that, and when done come back here.
