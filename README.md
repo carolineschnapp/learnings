@@ -16,7 +16,7 @@ There are various stages where you might want to undo or tweak something you hav
 
 * STAGE ONE Before you commit anything.
 * STAGE TWO After you've committed something to your `my-branch` branch, but before you publish that branch to your remote `origin/my-branch`.
-* STAGE THREE After you have published your branch to your remote `origin/my-branch`, but before you merge it to `origin/master`.
+* STAGE THREE After you have created a PR, but before you merge it.
 * STAGE FOUR After you have merged your branch to `origin/master`.
 
 The actions you'll take to undo or tweak will vary depending on the stage you're at.
@@ -108,6 +108,59 @@ Then if that branch had been published on Github, continue on with these additio
 `git push origin newname` # Publishes your local branch to Github.
 
 _Only rename a branch that you have been all alone contributing to, though._ 
+
+# STAGE THREE After you have created a PR, but before you merge it.
+
+**Blooper**
+
+It will happen that you want to edit the commits in your PR before you merge your branch your branch to master. You may want to rename badly-named commits, or squash commits that make alterations into other commits. It's okay to have separate commits within a PR if each does its own 'main' thing, but not so much to have a long string of commits that reveal your trials and errors along the way to a solution.
+
+**Solution**
+
+While on your branch (the one you want to later merge to master), do a `git rebase --interactive HEAD~N` where N is the number of commits you want to revisit from now. If your PR contains 5 commits, and you want to revist them all, use:
+
+`git rebase --interactive HEAD~5` # Will allow you to revist the last 5 commits on the branch you're on now.
+
+Last command will open a file in your default Git editor. Want to use Sublime, or Textmate, and not command line? Before you run a rebase, tell Git which text editor you want to use: https://help.github.com/articles/associating-text-editors-with-git/
+
+After running the last command, you'll have a file open that begins with something like this:
+
+```md
+pick 85c3423 changed my name again bit
+pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting
+pick a5f4a0d renamed some file
+pick b788002 added some file
+```
+
+To squash all commits into one, and rename the one remaining commit, edit the action names at the beginning of each line like so:
+
+```md
+reword 85c3423 a new better commit message that describes all that was done here and below
+fixup f7f3f6d changed my name a bit
+fixup 310154e updated README formatting
+fixup a5f4a0d renamed some file
+fixup b788002 added some file
+```
+
+It's pretty much self-exlanatory all that you can do to your commits from the comments in the file.
+
+```shell
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+```
+
+Then save and close the file.
+
+Time to push your changes to your PR with:
+
+`git push origin my-branch -f`
+
+
+
 
 
 
