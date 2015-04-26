@@ -1,10 +1,8 @@
 As a prerequisite to this tutorial, you will need to:
 
 * Create a new repo in your personal Github account. Call it 'learnings'.
-* In that repo, add a README.md file with random text in it — any text you like.
+* In that repo, add a README.md file with content in it.
 * Clone the repo to your computer.
-
-That's it. We won't cover how the above is done, that's Github basics. Github will hold your hand through that process anyway.
 
 Do that, and when done come back here.
 
@@ -159,7 +157,25 @@ Time to push your changes to your PR with:
 
 `git push origin my-branch -f`
 
+**Blooper**
 
+After you created your PR, someone tells you your branch name is less than ideal — “Why didn't you prefix with the theme name?”. You've been alone contributing to your PR.
+
+**Solution**
+
+It's very easy to NOT use command line to rename a branch published to Github, so we'll start with using the Github website UI. This will work only if your PR/branch has not been merged.
+
+Start with this:
+
+`git branch -m oldname newname` # This renames your branch on your computer.
+
+Then time to delete the old branch on Github, and push your renamed branch to it.
+
+`git push origin :oldname` # Delete the branch on Github.
+
+`git push origin newname` # Publishes your local branch to Github.
+
+Finally you'll need to create a PR again, because as far as Github is concerned that's a brand new branch.
 
 
 
